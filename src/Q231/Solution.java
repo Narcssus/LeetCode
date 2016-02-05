@@ -11,8 +11,8 @@ public class Solution {
         return true;
     }
 
-	public static void main(String[] args) {
-		System.out.print(isPowerOfTwo(0));
-	}
+//	public static void main(String[] args) {
+//		System.out.print(isPowerOfTwo(0));
+//	}
 
 }
