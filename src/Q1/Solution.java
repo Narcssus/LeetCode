@@ -1,6 +1,7 @@
 package Q1;
 
 import java.util.Arrays;
+import java.util.Hashtable;
 
 public class Solution {
 	
@@ -10,36 +11,48 @@ public class Solution {
 		return max;
 	}
 	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public static int[] twoSum(int[] nums, int target) {
 		int[] ans={0,0};
-		int[] index =new int[getMax(nums)+1];
-		for(int i=nums.length-1;i>=0;i--){
-			index[nums[i]]=i;
-		}
-		Arrays.sort(nums);
-		int tmp=0;
-		int i=0;
-		while(i<nums.length-1){
-			tmp=nums[i]+nums[i+1];
-			if(tmp>target)	return ans;
-			else if(tmp==target){
-				ans[0]=Math.min(index[nums[i]],index[nums[i+1]])+1;
-				ans[1]=Math.max(index[nums[i]],index[nums[i+1]])+1;
-				return ans;
+		Hashtable index1 = new Hashtable();
+		Hashtable index2 = new Hashtable();
+		for(int i=0;i<nums.length;i++){
+			if(index1.containsKey(nums[i])&&!index2.containsKey(nums[i])){
+				index2.put(nums[i],i+1);
 			}
-			else continue;
+			else if(!index1.containsKey(nums[i])) index1.put(nums[i],i+1);
+		}		
+		int tmp=0;
+		Arrays.sort(nums);
+		for(int i=0;i<nums.length;i++){
+			for(int j=0;j<nums.length;j++){
+				tmp=nums[i]+nums[j];
+				if(tmp>target)	break;
+				else if(tmp==target){
+					if(nums[i]==nums[j]){
+						ans[0]=Integer.parseInt(index1.get(nums[i]).toString());
+						ans[1]=Integer.parseInt(index2.get(nums[j]).toString());
+					}
+					else{
+						ans[0]=Integer.parseInt(index1.get(nums[i]).toString());
+						ans[1]=Integer.parseInt(index1.get(nums[j]).toString());
+					}
+					Arrays.sort(ans);
+					return ans;
+				}
+			}
+			if(nums[i]>target) break;
 			
 		}
-		
-		
         return ans;
     }
 	
-	public static void main(String[] args) {
-		int a[]={2, 7, 11, 15};
-		int t=9;
-		System.out.print(twoSum(a, t)[0]+" "+twoSum(a, t)[1]);
-		
-	}
+//	public static void main(String[] args) {
+//		int a[]={-1,-2,-3,-4,-5};
+//		int t=-8;
+//		int[] ans=twoSum(a, t);
+//		System.out.print(ans[0]+" "+ans[1]);
+//		
+//	}
 
 }
