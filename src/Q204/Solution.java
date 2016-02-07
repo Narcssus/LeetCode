@@ -1,29 +1,18 @@
 package Q204;
 
-
 public class Solution {
 	public static int countPrimes(int n) {
-		int now=2;
-		int i=0;
-		int mark=1;
-		int count=0;
-		if (n == 0 || n == 1 || n == 2)
-			return 0;
-		while (now < n) {
-			mark=1;
-			i=2;
-			while(i*i<=now){
-				if(now%i==0){
-					mark=0;
-				}
-				i++;
-			}
-			if(mark==1){
+		boolean[] notPrimes = new boolean[n];
+		int count = 0;
+		for (int i = 2; i < n; i++) {
+			if (notPrimes[i]==false) {
 				count++;
+				for(int j=2;j*i<n;j++){
+					notPrimes[i*j]=true;
+				}
 			}
-			now++;
-		}
 
+		}
 		return count;
 	}
 
