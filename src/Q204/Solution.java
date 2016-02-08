@@ -12,11 +12,11 @@ public class Solution {
 				}
 			}
 
-		}
+		}	
 		return count;
 	}
 
-	public static void main(String[] args) {
-		System.out.print(countPrimes(499979));
-	}
+//	public static void main(String[] args) {
+//		System.out.print(countPrimes(499979));
+//	}
 }
