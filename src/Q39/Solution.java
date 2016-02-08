@@ -36,9 +36,9 @@ public class Solution {
 		return ans;
 	}
 
-	public static void main(String[] args) {
-		int[] a = { };
-		System.out.println(combinationSum(a, 1).toString());
-	}
+//	public static void main(String[] args) {
+//		int[] a = { };
+//		System.out.println(combinationSum(a, 1).toString());
+//	}
 
 }
