@@ -34,7 +34,7 @@ public class Solution {
         ans.add(now);
         while(!s.isEmpty()) ans.add(s.pop());
         return ans;
-		
+				
 
 	}
 	
