@@ -1,7 +1,6 @@
 package Q324;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 public class Solution {
 //	//Find the Kth smaller number
