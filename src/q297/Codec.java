@@ -3,18 +3,10 @@ package q297;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import TreeNode.TreeNode;
 
 public class Codec {
 
-	static class TreeNode {
-		int val;
-		TreeNode left;
-		TreeNode right;
-
-		TreeNode(int x) {
-			val = x;
-		}
-	}
 
 	// Encodes a tree to a single string.
 	public static String serialize(TreeNode root) {
@@ -60,7 +52,7 @@ public class Codec {
 //		a1.left = a2;
 //		a1.right = a3;
 //	//	System.out.println(serialize(deserialize("")));
-//		TreeNode a=deserialize(serialize(a3));
+//		TreeNode a=deserialize("1,2,3");
 //		System.out.println(serialize(a));
 //	}
 
