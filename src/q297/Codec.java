@@ -3,7 +3,6 @@ package q297;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import q297.Codec_TLE.TreeNode;
 
 public class Codec {
 
