@@ -43,8 +43,8 @@ public class Solution_TLE {
 		return ans;
 	}
 
-	public static void main(String[] args) {
-		System.out.println(calculate("(1+(4+5+2)-3)+(6+8)"));
-	}
+//	public static void main(String[] args) {
+//		System.out.println(calculate("(1+(4+5+2)-3)+(6+8)"));
+//	}
 
 }
