@@ -4,11 +4,22 @@ import java.util.LinkedList;
 import java.util.Queue;
 import TreeNode.TreeNode;
 
-public class Codec_TLE {
+public class Codec {
 
-
+	//Get the node which val=x
+	public TreeNode getNode(TreeNode root,int x){
+		TreeNode tmp=null;
+		if(root.val==x) return root;
+		else{
+			if(root.left!=null) tmp=getNode(root.left,x);
+			if(tmp!=null) return tmp;
+			if(root.right!=null) tmp=getNode(root.right,x);
+			if(tmp!=null) return tmp;
+		}
+		return null;
+	}
 	// Encodes a tree to a single string.
-	public static String serialize(TreeNode root) {
+	public  String serialize(TreeNode root) {
 		String serializeTree = "";
 		Queue<TreeNode> q = new LinkedList<TreeNode>();
 		q.add(root);
@@ -41,7 +52,7 @@ public class Codec_TLE {
 	}
 
 	// Decodes your encoded data to tree.
-	public static TreeNode deserialize(String data) {
+	public  TreeNode deserialize(String data) {
 		if (data.length() < 1)
 			return null;
 		TreeNode root = null;
@@ -129,16 +140,5 @@ public class Codec_TLE {
 		return root;
 
 	}
-
-//	public static void main(String[] args) {
-//		TreeNode a1 = new TreeNode(1);
-//		TreeNode a2 = new TreeNode(2);
-//		TreeNode a3 = new TreeNode(3);
-//		a1.left = a2;
-//		a1.right = a3;
-//		System.out.println(serialize(deserialize("1")));
-//		// TreeNode a=deserialize(serialize(a1));
-//		// System.out.println(serialize(a));
-//	}
 
 }
