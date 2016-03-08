@@ -42,12 +42,12 @@ public class Solution {
 		return ans;
 	}
 
-	public static void main(String[] args) {
-		Solution s = new Solution();
-		String a = "1010";
-		String b = "1011";
-		System.out.print(s.addBinary(a, b));
-
-	}
+//	public static void main(String[] args) {
+//		Solution s = new Solution();
+//		String a = "1010";
+//		String b = "1011";
+//		System.out.print(s.addBinary(a, b));
+//
+//	}
 
 }
