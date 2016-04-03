@@ -28,10 +28,10 @@ public class Solution {
 
 	}
 
-	public static void main(String[] args) {
-
-		Solution s = new Solution();
-		System.out.print(s.compareVersion("1.1", "1.2.1"));
-	}
+//	public static void main(String[] args) {
+//
+//		Solution s = new Solution();
+//		System.out.print(s.compareVersion("1.1", "1.2.1"));
+//	}
 
 }
