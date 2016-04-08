@@ -1,6 +1,5 @@
 package TreeNode;
 
-
 public class TreeNode {
 	public int val;
 	public TreeNode left;
@@ -8,5 +7,8 @@ public class TreeNode {
 
 	public TreeNode(int x) {
 		val = x;
+	}
+
+	public TreeNode() {
 	}
 }
